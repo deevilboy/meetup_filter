@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Meetup Events Filter Plugin",
+  "description": "Filter Meetup Events (avoid events with only a few attendees)",
+  "version": "1.0",
+
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Click here!"
+    },
+  
+    "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["jquery-3.2.0.min.js", "popup.js"  ]
+    }
+  ],
+
+  "permissions": ["tabs", "<all_urls>"] 
+
+}
