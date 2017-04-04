@@ -1,8 +1,8 @@
-# Meetup.com Events Filter
+#Meetup.com Events Filter - Chrome Browser Extension
 
 Intro:
-Chrome Extension to Filter Meetup.com Events
--can filter for events with say 20 or more people attending
+Filters Meetup.com Events
+-can filter for popular events with say 30+ people attending
 
 
 Installation:
