@@ -3,68 +3,47 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<body>
- 	<h3>Meetup Events Filter</h3>
-    
- 	<form>  
- 	  <div class="form-group">
- 	    <label for="sel1">Minimum Attendees</label>
- 	    <select class="form-control" input-sm id="trigger_val" type="number">
- 	      <option>5</option>
- 	      <option>10</option>
- 	      <option>15</option>
- 	      <option>20</option>
- 	      <option>25</option>
- 	      <option>30</option>
- 	      <option>40</option>
- 	      <option>50</option>
- 	      <option>60</option>
- 	      <option>70</option>
- 	    </select>
- 	  </div>
- 	  <div class="form-group">
- 	      <label for="inputsm">Custom Size:</label>
- 	      <input class="form-control input-sm" id="trigger_val" type="number">
- 	    </div> 	  
- 	<input type="button" id="clickactivity" value="Submit">
-</form>
+<body style="width: 350px; height: 320px;>
+ 	
+  	<div id="login-overlay" class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+               <h4 align="center" class="modal-title" id="myModalLabel">Meetup Events Filter</h4>
+           </div>
+           
+           <!-- Form to set trigger_val (min. attendees)-->
+           <div class="modal-body">
+               <div class="row">
+                   <div class="col-xs-12">
+                       <div class="well">
+                       <small><p class="text-muted text-justify">Visit meetup.com to view Meetup events. Then apply the filter below to see only popular events.</p></small>
+                       <form>
+		 					  <div class="form-group">
+		 				 	    <label for="sel1">Minimum Attendees</label>
+		 				 	    <select class="form-control" input-sm id="trigger_val" type="number">
+		 				 	      <option>5</option>
+		 				 	      <option>10</option>
+		 				 	      <option>15</option>
+		 				 	      <option>20</option>
+		 				 	      <option>25</option>
+		 				 	      <option>30</option>
+		 				 	      <option>40</option>
+		 				 	      <option>50</option>
+		 				 	      <option>60</option>
+		 				 	      <option>70</option>
+		 				 	    </select>
+		 				 	  </div>                                                        
+  					   		  <input type="button" class="btn btn-success btn-block" id="clickactivity" value="Submit">
+                        </form>
+                       </div>
+                   </div>  
+               </div>
+           </div>
+       </div>
 
-<div class="btn-group">
-  <button type="button" class="btn btn-danger">Action</button>
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+	<!-- Pass trigger_val to Chrome "content JS scripts"; trigger is button w/ID=clickactivity -->
+	<script src="popup.js"></script> 
 
- 	<form id="form1">
- 	Number: <input type="number" id="trigger_val" ><br>
- 	<input type="button" id="clickactivity" value="Submit">
- 	</form>
-
- 	<a href="options.html"> Set Options </a>
-
-  <!-- Min. # of Attendees: <input type="number" name="a" id="clickactivity"><br>
-  <button onclick="injectTheScript(document.getElementById('clickactivity').value)">Filter 
-  Meetup Events</button>
-
-
-  a: <input type="number" name="a" id="a"><br>
-  b: <input type="number" name="b" id="b"><br>
-  <button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button>
- -->
-    
-    
-
-
-    <script src="popup.js"></script> 
-
-  </body>
+</body>
 </html>

@@ -5,27 +5,17 @@
   "description": "Filter Meetup Events (avoid events with only a few attendees)",
   "version": "1.0",
 
-    // "background": {
-    //   "scripts": ["popup.js"],
-    //   "persistent": false
-    // },
-
-    
-    "options_page": "options.html",
-
-
-    "browser_action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html",
-      "default_title": "Filter Meetup Events"
-    },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Filter Meetup Events"
+  },
   
     "content_scripts": [
     {
       "matches": ["http://*/*","https://*/*"],
-      "js": ["jquery-3.2.0.min.js", "popup.js", "content.js"  ]
-    }
-  ],
+      "js": ["jquery-3.2.0.min.js", "popup.js", "content.js"]
+    }],
 
   "permissions": ["tabs", "<all_urls>"] 
 
