@@ -8,8 +8,7 @@
   	<div id="login-overlay" class="modal-dialog">
        <div class="modal-content">
            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-               <h4 align="center" class="modal-title" id="myModalLabel">Meetup Events Filter</h4>
+           		<h4 align="center" class="modal-title" id="myModalLabel">Meetup Events Filter</h4>
            </div>
            
            <!-- Form to set trigger_val (min. attendees)-->
@@ -21,7 +20,7 @@
                        <form>
 		 					  <div class="form-group">
 		 				 	    <label for="sel1">Minimum Attendees</label>
-		 				 	    <select class="form-control" input-sm id="trigger_val" type="number">
+		 				 	    <select class="form-control" input-sm id="trigger_val_min" type="number">
 		 				 	      <option>5</option>
 		 				 	      <option>10</option>
 		 				 	      <option>15</option>
@@ -32,8 +31,25 @@
 		 				 	      <option>50</option>
 		 				 	      <option>60</option>
 		 				 	      <option>70</option>
+		 				 	      <option>85</option>
+		 				 	      <option>100</option>
+		 				 	      <option>150</option>
+		 				 	      <option>200</option>
 		 				 	    </select>
-		 				 	  </div>                                                        
+		 				 	  </div>
+
+  		 					  <div class="form-group">
+  		 				 	    <label for="sel2">Maximum Attendees</label>
+  		 				 	    <select class="form-control" input-sm id="trigger_val_max" type="string">
+  		 				 	      <option>Any</option>
+								  <option>300</option>
+  		 				 	      <option>250</option>
+  		 				 	      <option>200</option>
+  		 				 	      <option>150</option>
+  		 				 	      <option>100</option>
+  		 				 	    </select>
+  		 				 	  </div>                                                        
+    					
   					   		  <input type="button" class="btn btn-success btn-block" id="clickactivity" value="Submit">
                         </form>
                        </div>
